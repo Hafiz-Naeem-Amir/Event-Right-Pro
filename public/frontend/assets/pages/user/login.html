@@ -1,0 +1,182 @@
+<!doctype HTML>
+<html>
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+    <link href="../css/app.css" rel="stylesheet">
+    <link href="../css/select2.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="../../cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+            <meta charset="utf-8">
+    <link href="../images/upload/63f4c15738e28.png" rel="icon"
+        type="image/png">
+    <style>
+        :root {
+            --primary_color: #723ac6;
+            --light_primary_color: #723ac61a;
+            --profile_primary_color: #723ac652;
+            --middle_light_primary_color: #723ac685;
+        }
+
+        .bg-primary {
+            --tw-bg-opacity: 1;
+            background-color: var(--primary_color);
+        }
+
+        .bg-primary-dark {
+            --tw-bg-opacity: 1;
+            background-color: var(--profile_primary_color);
+            /* Use the profile_primary_color variable */
+        }
+
+        .navbar-nav>.active>a {
+            color: var(--primary_color);
+        }
+
+        .text-primary {
+            --tw-text-opacity: 1;
+            color: var(--primary_color);
+        }
+
+        .border-primary {
+            --tw-border-opacity: 1;
+            border-color: var(--primary_color);
+        }
+
+        input[type="radio"]:checked {
+            background-color: var(--primary_color) !important;
+            color: var(--primary_color) !important;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="flex justify-center mt-24">
+        <div
+            class="bg-white shadow-2xl rounded-md p-5 mt-10 1xl:w-[28%] xl:w-[35%] lg:w-[40%] xmd:w-[50%] md:w-[60%] sm:w-[70%] xxsm:w-full">
+                        <div class="flex justify-center mt-5">
+                <img src="../images/upload/645e53bbf24a8.png"
+                    alt="" class="object-cover w-auto h-20">
+            </div>
+            <p class="pt-6 text-3xl font-bold leading-9 text-center text-black font-poppins">
+                Sign in to your account</p>
+            <form action="https://eventrights.saasmonks.in/user/login" method="post" data-qa="form-login" name="login">
+                <input type="hidden" name="_token" value="Xn0jd2DB6nV2j6yAvW6pHI80rxfvJ3ejUMKj5ZrM">                <input type="hidden" value="http://eventrights.saasmonks.in/" name="url">
+
+                <div class="pt-12">
+                    <div
+                        class="flex sm:space-x-7 justify-center xxsm:space-y-5 msm:space-y-0 msm:space-x-5 xsm:space-x-0 xxsm:space-x-0 xxsm:mx-10.0 xxsm:flex-wrap xsm:flex-wrap msm:flex-nowrap">
+                        <label for="default-radio-1" class="w-full">
+                            <div
+                                class="border border-gray-light py-3.5 px-5 rounded-lg text-gray-100 w-full font-normal font-poppins text-base leading-6 flex items-center space-x-2">
+                                <input id="default-radio-1" class="userOrgRadio" type="radio" value="user" checked
+                                    name="type"
+                                    class="w-5 h-5 mr-2 border border-gray-light hover:border-gray-light focus:outline-none">
+                                <span>User</span>
+                            </div>
+                        </label>
+                        <label for="default-radio-2" class="w-full">
+                            <div
+                                class="border border-gray-light py-3.5 px-5 rounded-lg text-gray-100 w-full font-normal font-poppins text-base leading-6 flex items-center space-x-2">
+                                <input id="default-radio-2" class="userOrgRadio" type="radio" value="org"
+                                    name="type"
+                                    class="w-5 h-5 mr-2 border select border-gray-light hover:border-gray-light focus:outline-none">
+                                <span>Organizer</span>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="pt-5">
+                    <label for="email"
+                        class="text-base font-medium leading-6 text-black font-poppins">Email</label>
+                    <input type="email" name="email" id="email"
+                        class="z-20 block w-full p-3 text-sm font-normal text-black border rounded-lg font-poppins border-gray-light focus:outline-none"
+                        placeholder="Your Email">
+                                                        </div>
+                <div class="pt-5 ">
+                    <label for="password"
+                        class="text-base font-medium leading-6 text-black font-poppins">Password</label>
+                    <div class="relative">
+                        <input type="password" name="password" id="password"
+                            class="z-30 block w-full p-3 text-sm font-normal text-black border rounded-lg focus:outline-none font-poppins border-gray-light"
+                            placeholder="Password">
+                        <span class="absolute right-2.5 bottom-2.5 text-xl font-poppins font-medium text-gray px-2"><i
+                                class="fa-regular fa-eye text-primary" id="togglePassword"></i></span>
+                                            </div>
+                </div>
+                <div class="flex justify-between pt-4">
+                    <div class="flex">
+                        <input id="default-radio-1" type="checkbox" value="true" name="remember" class="mr-2">
+                        <label for=""
+                            class="font-poppins font-medium text-xs leading-5 text-black pt-0.5">Remember me</label>
+                    </div>
+                    <div>
+                        <a href="resetPassword.html"
+                            class="text-xs font-medium leading-5 font-poppins text-primary">Forgot your password?</a>
+                    </div>
+                </div>
+
+                <div class="pt-7">
+                    <button
+                        class="w-full py-4 text-sm font-medium leading-4 text-white rounded-lg font-poppins bg-primary focus:outline-none">Sign In</button>
+                </div>
+            </form>
+            <div class="flex justify-center pt-6">
+                <h1 class="pt-4 text-base font-medium leading-5 text-left font-poppins text-gray">
+                    Don’t have an account?
+                    <a href="register.html"
+                        class="text-base text-primary text-medium">Create Account</a>
+                </h1>
+            </div>
+            <a href="../login.html">
+                <h1 class="pt-4 text-base font-medium leading-5 text-left font-poppins text-primary text-center">Admin
+                    Login</h1>
+            </a>
+        </div>
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"91774ffbc6934a36bd8527461b4d5784","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const togglePassword = document.querySelector("#togglePassword");
+
+        togglePassword.addEventListener("click", function(e) {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            // toggle the eye / eye slash icon
+            this.classList.toggle("fa-eye-slash");
+        });
+
+        var radioBtns = document.querySelectorAll('input[type=radio][name="type"]');
+        var userRadionBtn = document.querySelector('input[type=radio][name="type"][value="user"]');
+
+        if (userRadionBtn && userRadionBtn.checked) {
+            document.getElementById('email').value = 'demouser@saasmonks.in';
+            document.getElementById('password').value = '123456';
+        }
+
+        radioBtns.forEach(function(radioButton) {
+            radioButton.addEventListener("change", function() {
+                if (this.value === 'user') {
+                    document.getElementById('email').value = 'demouser@saasmonks.in';
+                    document.getElementById('password').value = '123456';
+                } else if (this.value === 'org') {
+                    document.getElementById('email').value = 'demoorganizer@saasmonks.in';
+                    document.getElementById('password').value = '123456';
+                }
+            });
+        });
+    });
+</script>
+<script src="../../unpkg.com/flowbite%401.5.5/dist/flowbite.js"></script>
+
+</html>

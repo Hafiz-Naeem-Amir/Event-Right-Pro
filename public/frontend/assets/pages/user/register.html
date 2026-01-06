@@ -1,0 +1,912 @@
+<!doctype HTML>
+<html>
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Register Page</title>
+    <link href="../css/app.css" rel="stylesheet">
+    <link href="../css/select2.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="utf-8">
+    <link href="../images/upload/63f4c15738e28.png" rel="icon"
+        type="image/png">
+    <link href="../../cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <script src="../js/custom.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --primary_color: #723ac6;
+            --light_primary_color: #723ac61a;
+            --profile_primary_color: #723ac652;
+            --middle_light_primary_color: #723ac685;
+        }
+
+        .bg-primary {
+            --tw-bg-opacity: 1;
+            background-color: var(--primary_color);
+        }
+
+        .bg-primary-dark {
+            --tw-bg-opacity: 1;
+            background-color: var(--profile_primary_color);
+            /* Use the profile_primary_color variable */
+        }
+
+        .navbar-nav>.active>a {
+            color: var(--primary_color);
+        }
+
+        .text-primary {
+            --tw-text-opacity: 1;
+            color: var(--primary_color);
+        }
+
+        .border-primary {
+            --tw-border-opacity: 1;
+            border-color: var(--primary_color);
+        }
+
+        input[type="radio"]:checked {
+            background-color: var(--primary_color) !important;
+            color: var(--primary_color) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justify-center mt-16">
+        <div
+            class="bg-white shadow-2xl rounded-md p-5 mt-10 1xl:w-[40%] xl:w-[45%] lg:w-[45%] xmd:w-[55%] md:w-[65%] sm:w-[75%] xxsm:w-full">
+                                    <div class="flex justify-center mt-5">
+                <img src="../images/upload/645e53bbf24a8.png"
+                    alt="" class="h-20 w-auto object-cover">
+            </div>
+            <p class="font-poppins font-bold text-3xl leading-9 text-black text-center pt-6">
+                Create an account
+            </p>
+            <form action="https://eventrights.saasmonks.in/user/register" method="post">
+                <input type="hidden" name="_token" value="Xn0jd2DB6nV2j6yAvW6pHI80rxfvJ3ejUMKj5ZrM">                <div class="pt-12">
+                    <div
+                        class="flex sm:space-x-7 justify-center 1xl:mx-28 xl:mx-20 lg:mx-10 xmd:mx-10 sm:mx-10 msm:mx-10 xxsm:space-y-5 msm:space-y-0 msm:space-x-5 xsm:space-x-0 xxsm:space-x-0 xxsm:mx-10.0 xxsm:flex-wrap xsm:flex-wrap msm:flex-nowrap">
+                        <label for="default-radio-1" class="w-full">
+                            <div
+                                class="border border-gray-light py-3.5 px-5 rounded-lg text-gray-100 w-full font-normal font-poppins text-base leading-6 flex">
+                                <input id="default-radio-1" type="radio" value="user" checked name="user_type"
+                                    class="user h-5 w-5 mr-2 border border-gray-light  hover:border-gray-light focus:outline-none">
+                                <label for="default-radio-1">User
+                            </div>
+                        </label>
+                        <label for="default-radio-2" class="w-full">
+                            <div
+                                class="border border-gray-light py-3.5 px-5 rounded-lg text-gray-100  w-full font-normal font-poppins text-base leading-6 flex">
+                                <input id="default-radio-2" type="radio" value="organizer" name="user_type"
+                                    class="org w-5 h-5 mr-2 border border-gray-light hover:border-gray-light focus:outline-none">
+                                Organizer
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-5 sm:grid-cols-2 msm:grid-cols-2 xxsm:grid-cols-1">
+                    <div class="pt-5">
+                        <label for="first_name"
+                            class="font-poppins font-medium text-base leading-6 text-black">First Name</label>
+                        <input type="text" name="first_name" required
+                            id=""class="w-full text-sm font-poppins font-normal text-black block p-3 z-20 rounded-lg border border-gray-light focus:outline-none"
+                            placeholder="First Name">
+                    </div>
+                    <div class="pt-5">
+                        <label for="last_name"
+                            class="font-poppins font-medium text-base leading-6 text-black">Last Name</label>
+                        <input type="text" name="last_name" id="" required
+                            class="w-full text-sm font-poppins font-normal text-black block p-3 z-20 rounded-lg border border-gray-light focus:outline-none"
+                            placeholder="Last Name">
+                    </div>
+
+                    <div class="">
+                        <label for="number"
+                            class="font-poppins font-medium text-base leading-6 text-black">Contact Number</label>
+                        <div class="flex space-x-3">
+                            <div class="w-[35%]">
+                                <select id="countries" name="Countrycode"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="" disabled selected>Select Country</option>
+                                                                            <option class=" " value="93">
+                                            AFGHANISTAN(+93)
+                                        </option>
+                                                                            <option class=" " value="355">
+                                            ALBANIA(+355)
+                                        </option>
+                                                                            <option class=" " value="213">
+                                            ALGERIA(+213)
+                                        </option>
+                                                                            <option class=" " value="1684">
+                                            AMERICAN SAMOA(+1684)
+                                        </option>
+                                                                            <option class=" " value="376">
+                                            ANDORRA(+376)
+                                        </option>
+                                                                            <option class=" " value="244">
+                                            ANGOLA(+244)
+                                        </option>
+                                                                            <option class=" " value="1264">
+                                            ANGUILLA(+1264)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            ANTARCTICA(+0)
+                                        </option>
+                                                                            <option class=" " value="1268">
+                                            ANTIGUA AND BARBUDA(+1268)
+                                        </option>
+                                                                            <option class=" " value="54">
+                                            ARGENTINA(+54)
+                                        </option>
+                                                                            <option class=" " value="374">
+                                            ARMENIA(+374)
+                                        </option>
+                                                                            <option class=" " value="297">
+                                            ARUBA(+297)
+                                        </option>
+                                                                            <option class=" " value="61">
+                                            AUSTRALIA(+61)
+                                        </option>
+                                                                            <option class=" " value="43">
+                                            AUSTRIA(+43)
+                                        </option>
+                                                                            <option class=" " value="994">
+                                            AZERBAIJAN(+994)
+                                        </option>
+                                                                            <option class=" " value="1242">
+                                            BAHAMAS(+1242)
+                                        </option>
+                                                                            <option class=" " value="973">
+                                            BAHRAIN(+973)
+                                        </option>
+                                                                            <option class=" " value="880">
+                                            BANGLADESH(+880)
+                                        </option>
+                                                                            <option class=" " value="1246">
+                                            BARBADOS(+1246)
+                                        </option>
+                                                                            <option class=" " value="375">
+                                            BELARUS(+375)
+                                        </option>
+                                                                            <option class=" " value="32">
+                                            BELGIUM(+32)
+                                        </option>
+                                                                            <option class=" " value="501">
+                                            BELIZE(+501)
+                                        </option>
+                                                                            <option class=" " value="229">
+                                            BENIN(+229)
+                                        </option>
+                                                                            <option class=" " value="1441">
+                                            BERMUDA(+1441)
+                                        </option>
+                                                                            <option class=" " value="975">
+                                            BHUTAN(+975)
+                                        </option>
+                                                                            <option class=" " value="591">
+                                            BOLIVIA(+591)
+                                        </option>
+                                                                            <option class=" " value="387">
+                                            BOSNIA AND HERZEGOVINA(+387)
+                                        </option>
+                                                                            <option class=" " value="267">
+                                            BOTSWANA(+267)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            BOUVET ISLAND(+0)
+                                        </option>
+                                                                            <option class=" " value="55">
+                                            BRAZIL(+55)
+                                        </option>
+                                                                            <option class=" " value="246">
+                                            BRITISH INDIAN OCEAN TERRITORY(+246)
+                                        </option>
+                                                                            <option class=" " value="673">
+                                            BRUNEI DARUSSALAM(+673)
+                                        </option>
+                                                                            <option class=" " value="359">
+                                            BULGARIA(+359)
+                                        </option>
+                                                                            <option class=" " value="226">
+                                            BURKINA FASO(+226)
+                                        </option>
+                                                                            <option class=" " value="257">
+                                            BURUNDI(+257)
+                                        </option>
+                                                                            <option class=" " value="855">
+                                            CAMBODIA(+855)
+                                        </option>
+                                                                            <option class=" " value="237">
+                                            CAMEROON(+237)
+                                        </option>
+                                                                            <option class=" " value="1">
+                                            CANADA(+1)
+                                        </option>
+                                                                            <option class=" " value="238">
+                                            CAPE VERDE(+238)
+                                        </option>
+                                                                            <option class=" " value="1345">
+                                            CAYMAN ISLANDS(+1345)
+                                        </option>
+                                                                            <option class=" " value="236">
+                                            CENTRAL AFRICAN REPUBLIC(+236)
+                                        </option>
+                                                                            <option class=" " value="235">
+                                            CHAD(+235)
+                                        </option>
+                                                                            <option class=" " value="56">
+                                            CHILE(+56)
+                                        </option>
+                                                                            <option class=" " value="86">
+                                            CHINA(+86)
+                                        </option>
+                                                                            <option class=" " value="61">
+                                            CHRISTMAS ISLAND(+61)
+                                        </option>
+                                                                            <option class=" " value="672">
+                                            COCOS (KEELING) ISLANDS(+672)
+                                        </option>
+                                                                            <option class=" " value="57">
+                                            COLOMBIA(+57)
+                                        </option>
+                                                                            <option class=" " value="269">
+                                            COMOROS(+269)
+                                        </option>
+                                                                            <option class=" " value="242">
+                                            CONGO(+242)
+                                        </option>
+                                                                            <option class=" " value="242">
+                                            CONGO, THE DEMOCRATIC REPUBLIC OF THE(+242)
+                                        </option>
+                                                                            <option class=" " value="682">
+                                            COOK ISLANDS(+682)
+                                        </option>
+                                                                            <option class=" " value="506">
+                                            COSTA RICA(+506)
+                                        </option>
+                                                                            <option class=" " value="225">
+                                            COTE D&#039;IVOIRE(+225)
+                                        </option>
+                                                                            <option class=" " value="385">
+                                            CROATIA(+385)
+                                        </option>
+                                                                            <option class=" " value="53">
+                                            CUBA(+53)
+                                        </option>
+                                                                            <option class=" " value="357">
+                                            CYPRUS(+357)
+                                        </option>
+                                                                            <option class=" " value="420">
+                                            CZECH REPUBLIC(+420)
+                                        </option>
+                                                                            <option class=" " value="45">
+                                            DENMARK(+45)
+                                        </option>
+                                                                            <option class=" " value="253">
+                                            DJIBOUTI(+253)
+                                        </option>
+                                                                            <option class=" " value="1767">
+                                            DOMINICA(+1767)
+                                        </option>
+                                                                            <option class=" " value="1809">
+                                            DOMINICAN REPUBLIC(+1809)
+                                        </option>
+                                                                            <option class=" " value="593">
+                                            ECUADOR(+593)
+                                        </option>
+                                                                            <option class=" " value="20">
+                                            EGYPT(+20)
+                                        </option>
+                                                                            <option class=" " value="503">
+                                            EL SALVADOR(+503)
+                                        </option>
+                                                                            <option class=" " value="240">
+                                            EQUATORIAL GUINEA(+240)
+                                        </option>
+                                                                            <option class=" " value="291">
+                                            ERITREA(+291)
+                                        </option>
+                                                                            <option class=" " value="372">
+                                            ESTONIA(+372)
+                                        </option>
+                                                                            <option class=" " value="251">
+                                            ETHIOPIA(+251)
+                                        </option>
+                                                                            <option class=" " value="500">
+                                            FALKLAND ISLANDS (MALVINAS)(+500)
+                                        </option>
+                                                                            <option class=" " value="298">
+                                            FAROE ISLANDS(+298)
+                                        </option>
+                                                                            <option class=" " value="679">
+                                            FIJI(+679)
+                                        </option>
+                                                                            <option class=" " value="358">
+                                            FINLAND(+358)
+                                        </option>
+                                                                            <option class=" " value="33">
+                                            FRANCE(+33)
+                                        </option>
+                                                                            <option class=" " value="594">
+                                            FRENCH GUIANA(+594)
+                                        </option>
+                                                                            <option class=" " value="689">
+                                            FRENCH POLYNESIA(+689)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            FRENCH SOUTHERN TERRITORIES(+0)
+                                        </option>
+                                                                            <option class=" " value="241">
+                                            GABON(+241)
+                                        </option>
+                                                                            <option class=" " value="220">
+                                            GAMBIA(+220)
+                                        </option>
+                                                                            <option class=" " value="995">
+                                            GEORGIA(+995)
+                                        </option>
+                                                                            <option class=" " value="49">
+                                            GERMANY(+49)
+                                        </option>
+                                                                            <option class=" " value="233">
+                                            GHANA(+233)
+                                        </option>
+                                                                            <option class=" " value="350">
+                                            GIBRALTAR(+350)
+                                        </option>
+                                                                            <option class=" " value="30">
+                                            GREECE(+30)
+                                        </option>
+                                                                            <option class=" " value="299">
+                                            GREENLAND(+299)
+                                        </option>
+                                                                            <option class=" " value="1473">
+                                            GRENADA(+1473)
+                                        </option>
+                                                                            <option class=" " value="590">
+                                            GUADELOUPE(+590)
+                                        </option>
+                                                                            <option class=" " value="1671">
+                                            GUAM(+1671)
+                                        </option>
+                                                                            <option class=" " value="502">
+                                            GUATEMALA(+502)
+                                        </option>
+                                                                            <option class=" " value="224">
+                                            GUINEA(+224)
+                                        </option>
+                                                                            <option class=" " value="245">
+                                            GUINEA-BISSAU(+245)
+                                        </option>
+                                                                            <option class=" " value="592">
+                                            GUYANA(+592)
+                                        </option>
+                                                                            <option class=" " value="509">
+                                            HAITI(+509)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            HEARD ISLAND AND MCDONALD ISLANDS(+0)
+                                        </option>
+                                                                            <option class=" " value="39">
+                                            HOLY SEE (VATICAN CITY STATE)(+39)
+                                        </option>
+                                                                            <option class=" " value="504">
+                                            HONDURAS(+504)
+                                        </option>
+                                                                            <option class=" " value="852">
+                                            HONG KONG(+852)
+                                        </option>
+                                                                            <option class=" " value="36">
+                                            HUNGARY(+36)
+                                        </option>
+                                                                            <option class=" " value="354">
+                                            ICELAND(+354)
+                                        </option>
+                                                                            <option class=" " value="91">
+                                            INDIA(+91)
+                                        </option>
+                                                                            <option class=" " value="62">
+                                            INDONESIA(+62)
+                                        </option>
+                                                                            <option class=" " value="98">
+                                            IRAN, ISLAMIC REPUBLIC OF(+98)
+                                        </option>
+                                                                            <option class=" " value="964">
+                                            IRAQ(+964)
+                                        </option>
+                                                                            <option class=" " value="353">
+                                            IRELAND(+353)
+                                        </option>
+                                                                            <option class=" " value="972">
+                                            ISRAEL(+972)
+                                        </option>
+                                                                            <option class=" " value="39">
+                                            ITALY(+39)
+                                        </option>
+                                                                            <option class=" " value="1876">
+                                            JAMAICA(+1876)
+                                        </option>
+                                                                            <option class=" " value="81">
+                                            JAPAN(+81)
+                                        </option>
+                                                                            <option class=" " value="962">
+                                            JORDAN(+962)
+                                        </option>
+                                                                            <option class=" " value="7">
+                                            KAZAKHSTAN(+7)
+                                        </option>
+                                                                            <option class=" " value="254">
+                                            KENYA(+254)
+                                        </option>
+                                                                            <option class=" " value="686">
+                                            KIRIBATI(+686)
+                                        </option>
+                                                                            <option class=" " value="850">
+                                            KOREA, DEMOCRATIC PEOPLE&#039;S REPUBLIC OF(+850)
+                                        </option>
+                                                                            <option class=" " value="82">
+                                            KOREA, REPUBLIC OF(+82)
+                                        </option>
+                                                                            <option class=" " value="965">
+                                            KUWAIT(+965)
+                                        </option>
+                                                                            <option class=" " value="996">
+                                            KYRGYZSTAN(+996)
+                                        </option>
+                                                                            <option class=" " value="856">
+                                            LAO PEOPLE&#039;S DEMOCRATIC REPUBLIC(+856)
+                                        </option>
+                                                                            <option class=" " value="371">
+                                            LATVIA(+371)
+                                        </option>
+                                                                            <option class=" " value="961">
+                                            LEBANON(+961)
+                                        </option>
+                                                                            <option class=" " value="266">
+                                            LESOTHO(+266)
+                                        </option>
+                                                                            <option class=" " value="231">
+                                            LIBERIA(+231)
+                                        </option>
+                                                                            <option class=" " value="218">
+                                            LIBYAN ARAB JAMAHIRIYA(+218)
+                                        </option>
+                                                                            <option class=" " value="423">
+                                            LIECHTENSTEIN(+423)
+                                        </option>
+                                                                            <option class=" " value="370">
+                                            LITHUANIA(+370)
+                                        </option>
+                                                                            <option class=" " value="352">
+                                            LUXEMBOURG(+352)
+                                        </option>
+                                                                            <option class=" " value="853">
+                                            MACAO(+853)
+                                        </option>
+                                                                            <option class=" " value="389">
+                                            MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF(+389)
+                                        </option>
+                                                                            <option class=" " value="261">
+                                            MADAGASCAR(+261)
+                                        </option>
+                                                                            <option class=" " value="265">
+                                            MALAWI(+265)
+                                        </option>
+                                                                            <option class=" " value="60">
+                                            MALAYSIA(+60)
+                                        </option>
+                                                                            <option class=" " value="960">
+                                            MALDIVES(+960)
+                                        </option>
+                                                                            <option class=" " value="223">
+                                            MALI(+223)
+                                        </option>
+                                                                            <option class=" " value="356">
+                                            MALTA(+356)
+                                        </option>
+                                                                            <option class=" " value="692">
+                                            MARSHALL ISLANDS(+692)
+                                        </option>
+                                                                            <option class=" " value="596">
+                                            MARTINIQUE(+596)
+                                        </option>
+                                                                            <option class=" " value="222">
+                                            MAURITANIA(+222)
+                                        </option>
+                                                                            <option class=" " value="230">
+                                            MAURITIUS(+230)
+                                        </option>
+                                                                            <option class=" " value="269">
+                                            MAYOTTE(+269)
+                                        </option>
+                                                                            <option class=" " value="52">
+                                            MEXICO(+52)
+                                        </option>
+                                                                            <option class=" " value="691">
+                                            MICRONESIA, FEDERATED STATES OF(+691)
+                                        </option>
+                                                                            <option class=" " value="373">
+                                            MOLDOVA, REPUBLIC OF(+373)
+                                        </option>
+                                                                            <option class=" " value="377">
+                                            MONACO(+377)
+                                        </option>
+                                                                            <option class=" " value="976">
+                                            MONGOLIA(+976)
+                                        </option>
+                                                                            <option class=" " value="1664">
+                                            MONTSERRAT(+1664)
+                                        </option>
+                                                                            <option class=" " value="212">
+                                            MOROCCO(+212)
+                                        </option>
+                                                                            <option class=" " value="258">
+                                            MOZAMBIQUE(+258)
+                                        </option>
+                                                                            <option class=" " value="95">
+                                            MYANMAR(+95)
+                                        </option>
+                                                                            <option class=" " value="264">
+                                            NAMIBIA(+264)
+                                        </option>
+                                                                            <option class=" " value="674">
+                                            NAURU(+674)
+                                        </option>
+                                                                            <option class=" " value="977">
+                                            NEPAL(+977)
+                                        </option>
+                                                                            <option class=" " value="31">
+                                            NETHERLANDS(+31)
+                                        </option>
+                                                                            <option class=" " value="599">
+                                            NETHERLANDS ANTILLES(+599)
+                                        </option>
+                                                                            <option class=" " value="687">
+                                            NEW CALEDONIA(+687)
+                                        </option>
+                                                                            <option class=" " value="64">
+                                            NEW ZEALAND(+64)
+                                        </option>
+                                                                            <option class=" " value="505">
+                                            NICARAGUA(+505)
+                                        </option>
+                                                                            <option class=" " value="227">
+                                            NIGER(+227)
+                                        </option>
+                                                                            <option class=" " value="234">
+                                            NIGERIA(+234)
+                                        </option>
+                                                                            <option class=" " value="683">
+                                            NIUE(+683)
+                                        </option>
+                                                                            <option class=" " value="672">
+                                            NORFOLK ISLAND(+672)
+                                        </option>
+                                                                            <option class=" " value="1670">
+                                            NORTHERN MARIANA ISLANDS(+1670)
+                                        </option>
+                                                                            <option class=" " value="47">
+                                            NORWAY(+47)
+                                        </option>
+                                                                            <option class=" " value="968">
+                                            OMAN(+968)
+                                        </option>
+                                                                            <option class=" " value="92">
+                                            PAKISTAN(+92)
+                                        </option>
+                                                                            <option class=" " value="680">
+                                            PALAU(+680)
+                                        </option>
+                                                                            <option class=" " value="970">
+                                            PALESTINIAN TERRITORY, OCCUPIED(+970)
+                                        </option>
+                                                                            <option class=" " value="507">
+                                            PANAMA(+507)
+                                        </option>
+                                                                            <option class=" " value="675">
+                                            PAPUA NEW GUINEA(+675)
+                                        </option>
+                                                                            <option class=" " value="595">
+                                            PARAGUAY(+595)
+                                        </option>
+                                                                            <option class=" " value="51">
+                                            PERU(+51)
+                                        </option>
+                                                                            <option class=" " value="63">
+                                            PHILIPPINES(+63)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            PITCAIRN(+0)
+                                        </option>
+                                                                            <option class=" " value="48">
+                                            POLAND(+48)
+                                        </option>
+                                                                            <option class=" " value="351">
+                                            PORTUGAL(+351)
+                                        </option>
+                                                                            <option class=" " value="1787">
+                                            PUERTO RICO(+1787)
+                                        </option>
+                                                                            <option class=" " value="974">
+                                            QATAR(+974)
+                                        </option>
+                                                                            <option class=" " value="262">
+                                            REUNION(+262)
+                                        </option>
+                                                                            <option class=" " value="40">
+                                            ROMANIA(+40)
+                                        </option>
+                                                                            <option class=" " value="70">
+                                            RUSSIAN FEDERATION(+70)
+                                        </option>
+                                                                            <option class=" " value="250">
+                                            RWANDA(+250)
+                                        </option>
+                                                                            <option class=" " value="290">
+                                            SAINT HELENA(+290)
+                                        </option>
+                                                                            <option class=" " value="1869">
+                                            SAINT KITTS AND NEVIS(+1869)
+                                        </option>
+                                                                            <option class=" " value="1758">
+                                            SAINT LUCIA(+1758)
+                                        </option>
+                                                                            <option class=" " value="508">
+                                            SAINT PIERRE AND MIQUELON(+508)
+                                        </option>
+                                                                            <option class=" " value="1784">
+                                            SAINT VINCENT AND THE GRENADINES(+1784)
+                                        </option>
+                                                                            <option class=" " value="684">
+                                            SAMOA(+684)
+                                        </option>
+                                                                            <option class=" " value="378">
+                                            SAN MARINO(+378)
+                                        </option>
+                                                                            <option class=" " value="239">
+                                            SAO TOME AND PRINCIPE(+239)
+                                        </option>
+                                                                            <option class=" " value="966">
+                                            SAUDI ARABIA(+966)
+                                        </option>
+                                                                            <option class=" " value="221">
+                                            SENEGAL(+221)
+                                        </option>
+                                                                            <option class=" " value="381">
+                                            SERBIA AND MONTENEGRO(+381)
+                                        </option>
+                                                                            <option class=" " value="248">
+                                            SEYCHELLES(+248)
+                                        </option>
+                                                                            <option class=" " value="232">
+                                            SIERRA LEONE(+232)
+                                        </option>
+                                                                            <option class=" " value="65">
+                                            SINGAPORE(+65)
+                                        </option>
+                                                                            <option class=" " value="421">
+                                            SLOVAKIA(+421)
+                                        </option>
+                                                                            <option class=" " value="386">
+                                            SLOVENIA(+386)
+                                        </option>
+                                                                            <option class=" " value="677">
+                                            SOLOMON ISLANDS(+677)
+                                        </option>
+                                                                            <option class=" " value="252">
+                                            SOMALIA(+252)
+                                        </option>
+                                                                            <option class=" " value="27">
+                                            SOUTH AFRICA(+27)
+                                        </option>
+                                                                            <option class=" " value="0">
+                                            SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS(+0)
+                                        </option>
+                                                                            <option class=" " value="34">
+                                            SPAIN(+34)
+                                        </option>
+                                                                            <option class=" " value="94">
+                                            SRI LANKA(+94)
+                                        </option>
+                                                                            <option class=" " value="249">
+                                            SUDAN(+249)
+                                        </option>
+                                                                            <option class=" " value="597">
+                                            SURINAME(+597)
+                                        </option>
+                                                                            <option class=" " value="47">
+                                            SVALBARD AND JAN MAYEN(+47)
+                                        </option>
+                                                                            <option class=" " value="268">
+                                            SWAZILAND(+268)
+                                        </option>
+                                                                            <option class=" " value="46">
+                                            SWEDEN(+46)
+                                        </option>
+                                                                            <option class=" " value="41">
+                                            SWITZERLAND(+41)
+                                        </option>
+                                                                            <option class=" " value="963">
+                                            SYRIAN ARAB REPUBLIC(+963)
+                                        </option>
+                                                                            <option class=" " value="886">
+                                            TAIWAN, PROVINCE OF CHINA(+886)
+                                        </option>
+                                                                            <option class=" " value="992">
+                                            TAJIKISTAN(+992)
+                                        </option>
+                                                                            <option class=" " value="255">
+                                            TANZANIA, UNITED REPUBLIC OF(+255)
+                                        </option>
+                                                                            <option class=" " value="66">
+                                            THAILAND(+66)
+                                        </option>
+                                                                            <option class=" " value="670">
+                                            TIMOR-LESTE(+670)
+                                        </option>
+                                                                            <option class=" " value="228">
+                                            TOGO(+228)
+                                        </option>
+                                                                            <option class=" " value="690">
+                                            TOKELAU(+690)
+                                        </option>
+                                                                            <option class=" " value="676">
+                                            TONGA(+676)
+                                        </option>
+                                                                            <option class=" " value="1868">
+                                            TRINIDAD AND TOBAGO(+1868)
+                                        </option>
+                                                                            <option class=" " value="216">
+                                            TUNISIA(+216)
+                                        </option>
+                                                                            <option class=" " value="90">
+                                            TURKEY(+90)
+                                        </option>
+                                                                            <option class=" " value="7370">
+                                            TURKMENISTAN(+7370)
+                                        </option>
+                                                                            <option class=" " value="1649">
+                                            TURKS AND CAICOS ISLANDS(+1649)
+                                        </option>
+                                                                            <option class=" " value="688">
+                                            TUVALU(+688)
+                                        </option>
+                                                                            <option class=" " value="256">
+                                            UGANDA(+256)
+                                        </option>
+                                                                            <option class=" " value="380">
+                                            UKRAINE(+380)
+                                        </option>
+                                                                            <option class=" " value="971">
+                                            UNITED ARAB EMIRATES(+971)
+                                        </option>
+                                                                            <option class=" " value="44">
+                                            UNITED KINGDOM(+44)
+                                        </option>
+                                                                            <option class=" " value="1">
+                                            UNITED STATES(+1)
+                                        </option>
+                                                                            <option class=" " value="1">
+                                            UNITED STATES MINOR OUTLYING ISLANDS(+1)
+                                        </option>
+                                                                            <option class=" " value="598">
+                                            URUGUAY(+598)
+                                        </option>
+                                                                            <option class=" " value="998">
+                                            UZBEKISTAN(+998)
+                                        </option>
+                                                                            <option class=" " value="678">
+                                            VANUATU(+678)
+                                        </option>
+                                                                            <option class=" " value="58">
+                                            VENEZUELA(+58)
+                                        </option>
+                                                                            <option class=" " value="84">
+                                            VIET NAM(+84)
+                                        </option>
+                                                                            <option class=" " value="1284">
+                                            VIRGIN ISLANDS, BRITISH(+1284)
+                                        </option>
+                                                                            <option class=" " value="1340">
+                                            VIRGIN ISLANDS, U.S.(+1340)
+                                        </option>
+                                                                            <option class=" " value="681">
+                                            WALLIS AND FUTUNA(+681)
+                                        </option>
+                                                                            <option class=" " value="212">
+                                            WESTERN SAHARA(+212)
+                                        </option>
+                                                                            <option class=" " value="967">
+                                            YEMEN(+967)
+                                        </option>
+                                                                            <option class=" " value="260">
+                                            ZAMBIA(+260)
+                                        </option>
+                                                                            <option class=" " value="263">
+                                            ZIMBABWE(+263)
+                                        </option>
+                                                                    </select>
+                            </div>
+                            <div class="w-[100%]">
+                                <input type="number" name="phone" id=""
+                                    class="w-full text-sm font-poppins font-normal text-black block p-3 z-20 rounded-md border border-gray-light focus:outline-none"
+                                    placeholder="Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orginput hidden">
+                        <label for="organization_name"
+                            class="font-poppins font-medium text-base leading-6 text-black">Organization Name</label>
+                        <input type="text" name="organization_name" id=""
+                            class="w-full text-sm font-poppins font-normal text-black block p-3 z-20 rounded-lg border border-gray-light focus:outline-none"
+                            placeholder="Organization Name">
+                    </div>
+                    <div class=" ">
+                        <label for="email"
+                            class="font-poppins font-medium text-base leading-6 text-black">Email Address</label>
+                        <input type="email" name="email" id="" required
+                            class="w-full text-sm font-poppins font-normal text-black block p-3 z-20 rounded-lg border border-gray-light focus:outline-none"
+                            placeholder="Email Address">
+                    </div>
+                    <div class=" ">
+                        <label for="password"
+                            class="font-poppins font-medium text-base leading-6 text-black">Password</label>
+                        <div class="relative">
+                            <input type="password" name="password" id="password" required
+                                class="w-full focus:outline-none text-sm font-poppins font-normal text-black block p-3 z-30 rounded-lg border border-gray-light"
+                                placeholder="Password">
+                            <span
+                                class="absolute right-2.5 bottom-2.5 text-xl font-poppins font-medium text-gray px-2"><i
+                                    class="fa-regular fa-eye text-primary" id="togglePassword"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-7">
+                    <button
+                        class="font-poppins text-white bg-primary leading-4 w-full text-sm font-medium py-4 rounded-lg focus:outline-none">Create</button>
+                </div>
+            </form>
+            <div class="pt-6 flex justify-center">
+                <h1 class="font-poppins font-medium text-base leading-5 pt-4 text-left text-gray">
+                    Already have an account?
+                    <a href="login.html"
+                        class="text-primary text-medium text-base">Login</a>
+                </h1>
+            </div>
+        </div>
+
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"91774ffbc6934a36bd8527461b4d5784","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const togglePassword = document.querySelector("#togglePassword");
+
+        togglePassword.addEventListener("click", function(e) {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            // toggle the eye / eye slash icon
+            this.classList.toggle("fa-eye-slash");
+        });
+    });
+    $('.user').on('click', function() {
+        $('.orginput').addClass('hidden')
+    });
+    $('.org').on('click', function() {
+        $('.orginput').removeClass('hidden')
+    });
+</script>
+<script>
+    $('#location').select2();
+</script>
+<script src="../../unpkg.com/flowbite%401.5.5/dist/flowbite.js"></script>
+<script src="../../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+
+</html>

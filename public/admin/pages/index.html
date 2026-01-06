@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>EventRight Pro</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Favicon -->
+    <link href="{{ asset('site/images/upload/63f4c15738e28.png') }}" rel="icon" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.css" />
+
+    <!-- Flatpickr & Summernote -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+    <!-- jVectorMap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/jvectormap-next@3.0.0/jquery-jvectormap.css" rel="stylesheet">
+
+
+    <!-- Select2 & Chart.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" rel="stylesheet" />
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/custom.css') }}">
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <style>
+        :root {
+            --primary_color: #723ac6;
+            --light_primary_color: #723ac61a;
+            --middle_light_primary_color: #723ac685;
+        }
+
+        .bg-primary {
+            --tw-bg-opacity: 1;
+            background-color: var(--primary_color);
+        }
+
+        .bg-primary-dark {
+            --tw-bg-opacity: 1;
+            background-color: var(--profile_primary_color);
+        }
+
+        .navbar-nav>.active>a {
+            color: var(--primary_color);
+        }
+
+        .text-primary {
+            --tw-text-opacity: 1;
+            color: var(--primary_color);
+        }
+
+        .border-primary {
+            --tw-border-opacity: 1;
+            border-color: var(--primary_color);
+        }
+    </style>
+
+    <input type="hidden" name="currency" id="currency" value="$">
+    <input type="hidden" name="base_url" id="base_url" value="https://eventrights.saasmonks.in">
+    <meta name="csrf-token" content="fGcBQ2CD0wge3dpq45Ai4naUF0kUYagHgEMNPiGK" />
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
+    </div>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+
+            <nav class="navbar navbar-expand-lg main-navbar">
+
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
+                                    class="fas fa-bars"></i></a></li>
+                    </ul>
+                </form>
+
+
+                <ul class="navbar-nav navbar-right">
+                    <li>
+
+                        <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i
+                                class="far fa-bell"></i></a>
+
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                            <div class="dropdown-header">Notifications
+                                <a class="text-decoration-none float-right"
+                                    href="https://eventrights.saasmonks.in/markAllAsRead">Mark All As Read</a>
+                                <div class="float-right">
+                                </div>
+                            </div>
+
+                            <div class="dropdown-list-content dropdown-list-icons">
+                                <a href="#" class="dropdown-item">
+                                    <div class="dropdown-item-icon bg-danger text-white">
+                                        <img class="avatar" {{asset('site/images/upload/64196b8698592.jpg')}}>
+                                    </div>
+                                    <div class="dropdown-item-desc">
+                                        Hi Demo Organizer, Gordon Kinley has booked 1 tickets for event Virtual Live
+                                        Karaoke on 10 February 2024 12:00 pm successfully. From EventRight Pro
+                                        <div class="time">13 hours ago</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="dropdown-item-icon bg-danger text-white">
+                                        <img class="avatar" {{asset('site/images/upload/64196b8698592.jpg')}}>
+                                    </div>
+                                    <div class="dropdown-item-desc">
+                                        Hi Demo Organizer, Gordon Kinley has booked 1 tickets for event Virtual Live
+                                        Karaoke on 10 February 2024 12:00 pm successfully. From EventRight Pro
+                                        <div class="time">17 hours ago</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="dropdown-item-icon bg-danger text-white">
+                                        <img class="avatar" {{asset('site/images/upload/64196b8698592.jpg')}}>
+                                    </div>
+                                    <div class="dropdown-item-desc">
+                                        Hi Demo Organizer, Gordon Kinley has booked 1 tickets for event Virtual Live
+                                        Karaoke on 10 February 2024 12:00 pm successfully. From EventRight Pro
+                                        <div class="time">2 days ago</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="https://eventrights.saasmonks.in/notification">View All <i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                            class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img src="{{ asset('site/images/upload/English.png')}}" {{-- <img
+                                src="{{ asset('site/images/upload/64196b8698592.jpg') }}" class="avatar"> --}}
+
+                            class="mr-1 flag-icon">
+                            <div class="d-sm-none d-lg-inline-block"></div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="https://eventrights.saasmonks.in/change-language/English"
+                                class="dropdown-item has-icon">
+                                <img src="{{ asset('site/images/upload/English.png')}}" class="mr-2 flag-icon">
+                                English
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="{{ asset('site/images/upload/6418617825d38.png') }}"
+                                class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Organizer organizer</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Welcome Organizer organizer!</div>
+                            <a href="https://eventrights.saasmonks.in/profile" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i> Profile
+                            </a>
+                            <a class="dropdown-item">
+                                <button class="btn btn-outline-danger" id="check" name="check">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                                </button>
+                            </a>
+                            <script>
+                                document.getElementById("check").addEventListener('click', function () {
+                                    Swal.fire({
+                                        title: 'Are you sure to logout!!',
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#d33',
+                                        confirmButtonText: 'Yes',
+                                        allowOutsideClick: false
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            document.location = "/logout";
+                                        }
+                                    })
+                                });
+                            </script>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="main-sidebar">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="#">
+                            <img src="{{ asset('site/images/upload/645e53bbf24a8.png')}}" class="header-logo w-full  ">
+                        </a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="#">
+                            <img src="{{ asset('site/images/upload/63f4c15738e28.png')}}"
+                                class="header-sm-logo h-15 w-15">
+                        </a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Menu</li>
+
+                        <li class="active">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/organization/home">
+                                <i class="fas fa-chart-pie"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/orders">
+                                <i class="fas fa-columns"></i><span>Orders</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/orders-create-for-user">
+                                <i class="fas fa-ticket-simple"></i><span>Orders Create</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/get-notification">
+                                <i class="fas fa-bell"></i> <span>Send Notification</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/events">
+                                <i class="fas fa-calendar-alt"></i> <span>Events</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/scanner">
+                                <i class="fas fa-id-card"></i> <span>Scanner</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/organization/income">
+                                <i class="fa-solid fa-money-bill-wave"></i> <span>Income</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/user-review">
+                                <i class="fas fa-star"></i> <span>Review</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown ">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                                    class="fas fa-chart-bar"></i>
+                                <span>Reports</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link"
+                                        href="https://eventrights.saasmonks.in/organization-report/customer">Customer
+                                        Report</a></li>
+                                <li><a class="nav-link"
+                                        href="https://eventrights.saasmonks.in/organization-report/orders">Orders
+                                        Report</a></li>
+                                <li><a class="nav-link"
+                                        href="https://eventrights.saasmonks.in/organization-report/revenue">Revenue
+                                        Report</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link" href="https://eventrights.saasmonks.in/organizer-setting">
+                                <i class="fas fa-cogs"></i><span>Setting</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Dashboard </h1>
+                    </div>
+
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="card card-statistic-2">
+                                    <div class="card-stats">
+                                        <div class="card-stats-title">Order Statistics -
+                                            <div class="dropdown d-inline">
+                                                <a class="font-weight-600 dropdown-toggle month" data-toggle="dropdown"
+                                                    href="#" id="orders-month">All</a>
+                                                <ul class="dropdown-menu dropdown-menu-sm">
+                                                    <li class="dropdown-title">Select Month</li>
+                                                    <a href="https://eventrights.saasmonks.in/admin/home"
+                                                        class="text-decoration-none">All</a>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(1,'January' )">January</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(2,'February' )">February</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(3,'March' )">March</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(4,'April' )">April</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(5,'May' )">May</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(6,'June' )">June</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(7,'July' )">July</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(8,'August' )">August</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(9,'September' )">September</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(10,'October' )">October</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(11,'November' )">November</a>
+                                                    </li>
+                                                    <li><a href="#" class="dropdown-item"
+                                                            onclick="getStatistics(12,'December' )">December</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-stats-items">
+                                            <div class="card-stats-item">
+                                                <div class="card-stats-item-count order-pending">1716</div>
+                                                <div class="card-stats-item-label">Pending</div>
+                                            </div>
+                                            <div class="card-stats-item">
+                                                <div class="card-stats-item-count order-complete">1480</div>
+                                                <div class="card-stats-item-label">Completed</div>
+                                            </div>
+                                            <div class="card-stats-item">
+                                                <div class="card-stats-item-count order-cancel">0</div>
+                                                <div class="card-stats-item-label">Cancel</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-icon shadow-primary bg-primary">
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </div>
+                                    <div class="card-wrap">
+                                        <div class="card-header">
+                                            <h4>Total Orders</h4>
+                                        </div>
+                                        <div class="card-body order-total">
+                                            3196
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="card card-hero">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fas fa-ticket-alt"></i>
+                                        </div>
+                                        <h4>4010/108656</h4>
+                                        <div class="card-description">Remaining Tickets</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="card card-hero">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fas fa-glass-cheers"></i>
+                                        </div>
+                                        <h4>13</h4>
+                                        <div class="card-description">Events</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 col-xl-9">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card mb-4">
+                                            <div class="card-header pt-0 pb-0">
+                                                <div class="row w-100">
+                                                    <div class="col-lg-8">
+                                                        <h2 class="section-title">Upcoming Event</h2>
+                                                    </div>
+                                                    <div class="col-lg-4 text-right mt-2">
+                                                        <a href="https://eventrights.saasmonks.in/events">
+                                                            <button class="btn btn-sm btn-primary">See all</button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table home-tbl" id="">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <img class="table-img"
+                                                                        src="{{ asset('site/images/upload/63e37cbbd47f8.jfif') }}">
+                                                                </td>
+                                                                <td style="width:360px">
+                                                                    <h6>Virtual Cocktail Shake-up</h6>
+                                                                    <p>Online Event</p>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-user-friends cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">500 allowed</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-ticket-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">5873 Pcs left</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="far fa-calendar-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">2023-02-08</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img class="table-img"
+                                                                        src="{{ asset('site/images/upload/64707a6fc9d91.png') }}">
+                                                                </td>
+                                                                <td style="width:360px">
+                                                                    <h6>Couple's Campfire</h6>
+                                                                    <p>New York-New York Hotel &amp; Casino, South Las
+                                                                        Vegas Boulevard, Las Vegas, NV, USA</p>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-user-friends cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">500 allowed</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-ticket-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">1819 Pcs left</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="far fa-calendar-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">2023-02-10</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img class="table-img"
+                                                                        src="{{ asset('site/images/upload/63e5ea549eef9.jpg') }}">
+                                                                </td>
+                                                                <td style="width:360px">
+                                                                    <h6>Online Game Night</h6>
+                                                                    <p>Online Event</p>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-user-friends cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">500 allowed</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="fas fa-ticket-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">9817 Pcs left</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn-icon btn block">
+                                                                        <i class="far fa-calendar-alt cursor"></i>
+                                                                    </button>
+                                                                    <span class="tbl-info">2023-02-10</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body calender-event">
+                                        <input type="hidden" name="eventDate" id="eventDate"
+                                            value='["2023-02-08","2023-02-10","2023-02-10","2023-03-22","2023-06-24","2024-01-04","2024-02-10"]'>
+                                        <div id="home_calender"></div>
+                                        <h5 class="text-dark mb-4 mt-2">November Event</h5>
+                                        <div class="home-upcoming-event">
+                                            <div class="row">
+                                                <div class="col-12 text-center">
+                                                    <div class="empty-data">
+                                                        <div class="card-icon shadow-primary">
+                                                            <i class="fas fa-search"></i>
+                                                        </div>
+                                                        <h6 class="mt-3">No events found</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                </section>
+            </div>
+
+            <footer class="main-footer">
+                <div class="footer-left">
+                    © All rights reserved by SaaSMonks
+                </div>
+                <div class="footer-right">
+                    v1.8.0
+                </div>
+            </footer>
+
+
+            <!-- General JS Scripts -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous">
+                </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous">
+                </script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.js">
+                </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+            <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+
+
+            <script src="{{ asset('admin/js/jquery-jvectormap.min.js') }}"></script>
+            <script src="{{ asset('admin/js/jquery-jvectormap-world-mill.js') }}"></script>
+            <script src="{{ asset('admin/js/jquery.uploadPreview.min.js') }}"></script>
+            <script src="{{ asset('admin/js/bootstrap-tagsinput.min.js') }}"></script>
+            <script src="{{ asset('admin/js/bootstrap-colorpicker.min.js') }}"></script>
+            <script src="{{ asset('admin/js/dropzone.js') }}"></script>
+            <script src="{{ asset('admin/js/charts.js') }}"></script>
+            <script src="{{ asset('admin/js/stisla.js') }}"></script>
+            <script src="{{ asset('admin/js/scripts.js') }}"></script>
+            <script src="{{ asset('site/frontend/js/qrcode.min.js') }}"></script>
+            <script src="{{ asset('admin/js/myCustom.js') }}"></script>
+            <script src="{{ asset('admin/js/custom.js') }}"></script>
+
+
+            <script defer
+                src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+                integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+                data-cf-beacon='{"version":"2024.11.0","token":"91774ffbc6934a36bd8527461b4d5784","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
